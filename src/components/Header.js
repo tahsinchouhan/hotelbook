@@ -1,33 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
+  Button,
   Container,
-  Offcanvas,
-  Nav,
-  Navbar,
+  Dropdown,
   Form,
-  InputGroup,
   FormControl,
   Image,
-  Dropdown,
-  Button,
+  InputGroup,
+  Nav,
+  Navbar,
+  Offcanvas,
 } from "react-bootstrap";
-import axios from "axios";
-import { API_PATH } from "../Path/Path";
 
 import { HiMenu } from "react-icons/hi";
-import logo from "../assets/img/logo.png";
-import { NavLink, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { NavLink, useHistory } from "react-router-dom";
+import homeIcon from "../assets/icons/Homestays.png";
+import loginIcon from "../assets/icons/Loginicon.png";
+import logo from "../assets/img/logo.png";
 import LoginModal from "../components/modal/LoginModal";
 import SignupModal from "../components/modal/SignupModal";
-import loginIcon from "../assets/icons/Loginicon.png";
-import homeIcon from "../assets/icons/Homestays.png";
 
-import audioIcon from "../assets/icons/event.svg";
-import experienceIcon from "../assets/icons/experienceActive.svg";
-import exploreIcon from "../assets/icons/exploreActive.svg";
-import planIcon from "../assets/icons/planActive.svg";
-import blog from "../assets/icons/blog.svg";
 import supportIcon from "../assets/icons/supportActive.svg";
 
 import { logout } from "../redux/actions";
@@ -118,8 +111,8 @@ function Header({ showSignUpModal }) {
           <HiMenu onClick={handleShow} className="sidebar__toggler" />
           <div style={{ textAlign: "center" }}>
             <div onClick={() => history.push("/")}>
-              <span className="header_title_red">travel</span>
-              <span className="header_title_yellow">bastar</span>
+              <span className="header_title_red">Hotel</span>
+              <span className="header_title_yellow">Book</span>
             </div>
             <svg
               className="searchIcon"
@@ -209,36 +202,7 @@ function Header({ showSignUpModal }) {
                 <Image src={homeIcon} alt="home" />
                 <span style={{ left: "60px", position: "absolute" }}>HOME</span>
               </NavLink>
-              <NavLink className="sidebar__navlink" to="/explore">
-                <Image src={exploreIcon} alt="explore" />
-                <span style={{ left: "60px", position: "absolute" }}>
-                  EXPLORE
-                </span>
-              </NavLink>
-              <NavLink className="sidebar__navlink" to="/curatedexperiences">
-                <Image src={experienceIcon} alt="experience" />
-                <span style={{ left: "60px", position: "absolute" }}>
-                  EXPERIENCE
-                </span>
-              </NavLink>
-              <NavLink className="sidebar__navlink" to="/plan">
-                <Image src={planIcon} alt="plan" />
-                <span style={{ left: "60px", position: "absolute" }}>PLAN</span>
-              </NavLink>
-              <NavLink className="sidebar__navlink" to="/audioJourney">
-                <Image src={audioIcon} alt="audio" />
-                <span style={{ left: "60px", position: "absolute" }}>
-                  AUDIO JOURNEYS
-                </span>
-              </NavLink>
-              <NavLink
-                className="sidebar__navlink"
-                to={{ pathname: "https://blog.travelbastar.com" }}
-                target="_blank"
-              >
-                <Image src={blog} alt="plan" width={25} />
-                <span style={{ left: "60px", position: "absolute" }}>BLOG</span>
-              </NavLink>
+
               <NavLink
                 className="sidebar__navlink"
                 to={{
@@ -253,22 +217,6 @@ function Header({ showSignUpModal }) {
                 </span>
               </NavLink>
 
-              <NavLink className="sidebar_links" to="/badal">
-                Badal
-              </NavLink>
-
-              <NavLink className="sidebar_links" to="/kalagudi">
-                Kalagudi
-              </NavLink>
-              <NavLink className="sidebar_links" to="/cab-operator">
-                Cab Operator List
-              </NavLink>
-              <NavLink className="sidebar_links" to="/tour-operator">
-                Tour Operator List
-              </NavLink>
-              <NavLink className="sidebar_links" to="/covidresponse">
-                About Us
-              </NavLink>
               <a className="sidebar_links" href="tel:+916267020580">
                 Contact Us
               </a>
@@ -283,7 +231,7 @@ function Header({ showSignUpModal }) {
             <div style={{ marginLeft: "44%", marginTop: "0%" }}>
               <Image
                 src={logo}
-                style={{ height: "97px", width: "85px" }}
+                style={{ height: "97px", width: "120px" }}
                 alt="Travel Bastar"
               />
             </div>
@@ -305,30 +253,9 @@ function Header({ showSignUpModal }) {
                 <NavLink className="sidebar_item" to="/">
                   HOME
                 </NavLink>
-                <NavLink className="sidebar_item" to="/explore">
-                  EXPLORE
-                </NavLink>
-                <NavLink className="sidebar_item" to="/plan">
-                  PLAN
-                </NavLink>
-                <NavLink className="sidebar_item" to="/audioJourney">
-                  AUDIO JOURNEYS
-                </NavLink>
-                <NavLink className="sidebar_item" to="/buspass">
-                  BUS BOOKING
-                </NavLink>
-                <NavLink
-                  className="sidebar_item"
-                  to={{ pathname: "https://blog.travelbastar.com" }}
-                  target="_blank"
-                >
-                  BLOG
-                </NavLink>
-                <NavLink className="sidebar_item" to="/badal">
-                  BADAL
-                </NavLink>
-                <NavLink className="sidebar_item" to="/kalagudi">
-                  KALAGUDI
+
+                <NavLink className="sidebar_item" to="/hotelList">
+                  Hotel Booking
                 </NavLink>
               </div>
             </Nav>

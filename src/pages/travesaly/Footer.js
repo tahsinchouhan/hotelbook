@@ -1,6 +1,6 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 // import covid from "../../assets/img/covid-19.png";
 // import map from "../../assets/img/Map.svg";
 import images from "../../assets/img/image 1.svg";
@@ -20,40 +20,31 @@ function Footer() {
             <Col sm={4} md={4}>
               <div className="footer__block">
                 <div className="footer__item">
-                  <Link to="/covidresponse" className="link">
-                    <h6 className="footer__item-subtitle">For Visitors</h6>
-                  </Link>
+                  <h6 className="footer__item-subtitle">For Visitors</h6>
                 </div>
                 <div className="footer__item">
-                  <Link to="/cab-operator" className="link">
-                    <h5 className="footer__item-title"> Cab Operators List</h5>
-                    <small>View cab operators Details</small>
-                  </Link>
+                  <h5 className="footer__item-title"> Cab Operators List</h5>
+                  <small>View cab operators Details</small>
                 </div>
                 <div className="footer__item">
-                  <Link to="/tour-operator" className="link">
-                    <h5 className="footer__item-title"> Tour Operators List</h5>
-                    <small>View tour operators Details</small>
-                  </Link>
+                  <h5 className="footer__item-title"> Tour Operators List</h5>
+                  <small>View tour operators Details</small>
                 </div>
 
                 <div className="footer__item">
-                  <Link to="/promotionalContent" className="link">
-                    <h5 className="footer__item-title"> Promotional Content</h5>
-                    <small>Checkout awesome things that we offer </small>
-                  </Link>
+                  <h5 className="footer__item-title"> Promotional Content</h5>
+                  <small>Checkout awesome things that we offer </small>
                 </div>
 
                 {/* <div className="footer__item">
                   <Link to="/covidresponse" className="link">
                     <h5 className="footer__item-title"> Covid-19 Response</h5>
-                  </Link>
+                 
                   <small>Health and Safety Update</small>
                 </div> */}
                 <div className="footer__item">
-                  <Link to="/covidresponse" className="link">
-                    <h5 className="footer__item-title">Booking Details</h5>
-                  </Link>
+                  <h5 className="footer__item-title">Booking Details</h5>
+
                   <small>Know how to book or cancel</small>
                 </div>
               </div>
@@ -61,26 +52,18 @@ function Footer() {
             <Col sm={4} md={4}>
               <div className="footer__block">
                 <div className="footer__item">
-                  <Link to="/registrationguide" className="link">
-                    <h6 className="footer__item-subtitle">
-                      Vendor & Organization Registration
-                    </h6>
-                  </Link>
+                  <h6 className="footer__item-subtitle">
+                    Vendor & Organization Registration
+                  </h6>
                 </div>
                 <div className="footer__item">
-                  <Link
-                    to="#"
-                    className="link"
-                    onClick={() => goForRegistration()}
-                  >
-                    <h5 className="footer__item-title">Registration Form</h5>
-                  </Link>
+                  <h5 className="footer__item-title">Registration Form</h5>
+
                   <small>Vendor & Organization Registration</small>
                 </div>
                 <div className="footer__item">
-                  <Link to="/registrationguide" className="link">
-                    <h5 className="footer__item-title">Booking Details</h5>
-                  </Link>
+                  <h5 className="footer__item-title">Booking Details</h5>
+
                   <small>Map, Guides and Packages </small>
                 </div>
               </div>
