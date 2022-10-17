@@ -3,7 +3,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 // import covid from "../../assets/img/covid-19.png";
 // import map from "../../assets/img/Map.svg";
-import images from "../../assets/img/image 1.svg";
 import logo from "../../assets/img/logo.png";
 
 function Footer() {
@@ -82,20 +81,6 @@ function Footer() {
               </div>
             </Col>
           </Row>
-          <center className="mt-3">
-            <img src={images} width="50" alt="image" />
-            <h6 className="mt-1">
-              An initiative by District Bastar Administration
-            </h6>
-            <a
-              className="code"
-              style={{ color: "#212529" }}
-              href={`tel:+916267020580`}
-            >
-              Contact Us : +91 6267020580
-            </a>
-            <br />
-          </center>
         </Container>
       </footer>
     </>
